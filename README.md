@@ -33,8 +33,10 @@
 3.  **用户习惯：** 绝大多数用户 (90%+) 仅购买过一次。平台当务之急不是“推销昂贵新品”，而是设计“首单后的复购激励机制” (如次单 8 折券)。
 
 ## 📈 4. 可视化仪表盘 (Dashboard)
-点击下方链接查看可交互的 Tableau 仪表盘：
-👉 **[View Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/ethan.chen6113/viz/OlistE-commerceRFMAnalysis/sheet0?publish=yes)**
+点击链接查看可交互的 Tableau 仪表盘：
+
+👉 **[View Interactive Dashboard on Tableau Public]
+(https://public.tableau.com/app/profile/ethan.chen6113/viz/OlistE-commerceRFMAnalysis/sheet0?publish=yes)**
 
 ![Dashboard Screenshot](Olist-Ecommerce-Analysis/Image/dashboard_screenshot.png)
 
@@ -43,7 +45,8 @@
 核心分析逻辑位于 `notebooks/` 文件夹中：
 1.  **Data Loading:** 读取 Orders, Items, Customers 表。
 2.  **Data Cleaning:** 时间标准化，去重。
-3.  **RFM Calculation:** ```python
+3.  **RFM Calculation:**
+    ```python
     # 核心代码片段：解决长尾分布的 Rank 算法
     rfm['F_Score'] = pd.qcut(rfm['Frequency'].rank(method='first'), q=5, labels=[1,2,3,4,5])
     ```
