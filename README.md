@@ -36,8 +36,8 @@
 点击下方链接查看可交互的 Tableau 仪表盘：
 👉 **[View Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/ethan.chen6113/viz/OlistE-commerceRFMAnalysis/sheet0?publish=yes)**
 
-![Dashboard Screenshot](images/dashboard_screenshot.png)
-*(在此处插入你的 Dashboard 截图，让招聘官一眼看到效果)*
+![Dashboard Screenshot](Olist-Ecommerce-Analysis/Image/dashboard_screenshot.png)
+
 
 ## 💻 5. 代码结构 (Project Structure)
 核心分析逻辑位于 `notebooks/` 文件夹中：
@@ -56,4 +56,5 @@
 
 ---
 *Author: [Ethan Chen]*
+
 *Contact: [17701858351@163.com]*
