@@ -1,2 +1,59 @@
-# Olist-E-commerce-Customer-Segmentation-RFM-Analysis
-利用 RFM 模型与 K-Means 聚类对巴西电商用户进行价值分层与流失预警
+<img width="1350" height="1012" alt="dashboard_screenshot" src="https://github.com/user-attachments/assets/0854340d-e931-4ed3-a94d-9e4d7886b47a" /># 🛒 Olist E-commerce Customer Segmentation & RFM Analysis
+> **利用 RFM 模型与 K-Means 聚类对巴西电商用户进行价值分层与流失预警**
+
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
+[![Pandas](https://img.shields.io/badge/Library-Pandas-orange)](https://pandas.pydata.org/)
+[![Tableau](https://img.shields.io/badge/Visualization-Tableau-red)](https://public.tableau.com/)
+
+## 📖 1. 项目背景 (Business Problem)
+**数据源：** [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/olistbr/brazilian-ecommerce) (100k+ 订单数据)
+
+作为一家电商平台，Olist 面临着用户留存率低、营销资源分配不均的问题。为了提高营销 ROI（投资回报率），本项目旨在解决以下商业问题：
+1.  如何识别高价值客户（High-Value Customers）？
+2.  如何区分即将流失的用户并进行预警？
+3.  如何基于用户行为制定差异化的营销策略？
+
+## 🛠️ 2. 技术栈与方法论 (Tech Stack & Methodology)
+本项目采用 **RFM 模型 (Recency, Frequency, Monetary)** 作为核心分析框架。
+
+* **数据清洗 (Python/Pandas):**
+    * 处理多表连接 (9张关系表)，解决 `customer_id` 与 `unique_id` 的混淆问题。
+    * 处理时间戳格式与缺失值，过滤非交付订单。
+* **特征工程 (Feature Engineering):**
+    * 计算 R, F, M 核心指标。
+    * **难点解决：** 针对数据严重的长尾分布（Skewed Data），使用 `Rank` + `Quantile` (分位数法) 进行 1-5 分的动态打分。
+* **可视化 (Tableau):**
+    * 构建交互式仪表盘，展示用户分层画像与价值分布。
+
+## 📊 3. 核心发现 (Key Insights)
+经过对 96,000+ 名用户的分析，我们得出了以下关键结论：
+
+1.  **二八定律验证：** 仅 **1%** 的顶级用户 (RFM=555) 贡献了极其可观的营收比例。这些 "Champions" 是平台的核心资产。
+2.  **流失预警：** "Hibernating" (沉睡) 用户群体的平均未购买天数已超过 **400天**。针对此群体的通用营销邮件 ROI 极低，建议停止高成本投放。
+3.  **用户习惯：** 绝大多数用户 (90%+) 仅购买过一次。平台当务之急不是“推销昂贵新品”，而是设计“首单后的复购激励机制” (如次单 8 折券)。
+
+## 📈 4. 可视化仪表盘 (Dashboard)
+点击下方链接查看可交互的 Tableau 仪表盘：
+👉 **[View Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/ethan.chen6113/viz/OlistE-commerceRFMAnalysis/sheet0?publish=yes)**
+
+![Dashboard Screenshot](images/dashboard_screenshot.png)
+*(在此处插入你的 Dashboard 截图，让招聘官一眼看到效果)*
+
+## 💻 5. 代码结构 (Project Structure)
+核心分析逻辑位于 `notebooks/` 文件夹中：
+1.  **Data Loading:** 读取 Orders, Items, Customers 表。
+2.  **Data Cleaning:** 时间标准化，去重。
+3.  **RFM Calculation:** ```python
+    # 核心代码片段：解决长尾分布的 Rank 算法
+    rfm['F_Score'] = pd.qcut(rfm['Frequency'].rank(method='first'), q=5, labels=[1,2,3,4,5])
+    ```
+4.  **Segmentation:** 将用户标记为 Champions, Loyal, Hibernating 等。
+
+## 🚀 6. 如何运行 (How to Run)
+1.  Clone this repository.
+2.  Install requirements: `pip install pandas numpy`
+3.  Run the Jupyter Notebook in the `notebooks` folder.
+
+---
+*Author: [Ethan Chen]*
+*Contact: [17701858351@163.com]*
