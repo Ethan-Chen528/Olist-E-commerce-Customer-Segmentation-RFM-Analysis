@@ -1,4 +1,4 @@
-<img width="1350" height="1012" alt="dashboard_screenshot" src="https://github.com/user-attachments/assets/0854340d-e931-4ed3-a94d-9e4d7886b47a" /># 🛒 Olist E-commerce Customer Segmentation & RFM Analysis
+# 🛒 Olist E-commerce Customer Segmentation & RFM Analysis
 > **利用 RFM 模型与 K-Means 聚类对巴西电商用户进行价值分层与流失预警**
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
@@ -35,8 +35,7 @@
 ## 📈 4. 可视化仪表盘 (Dashboard)
 点击链接查看可交互的 Tableau 仪表盘：
 
-👉 **[View Interactive Dashboard on Tableau Public]
-(https://public.tableau.com/app/profile/ethan.chen6113/viz/OlistE-commerceRFMAnalysis/sheet0?publish=yes)**
+👉 **[https://public.tableau.com/app/profile/ethan.chen6113/viz/OlistE-commerceRFMAnalysis/sheet0?publish=yes]**
 
 ![Dashboard Screenshot](Olist-Ecommerce-Analysis/Image/dashboard_screenshot.png)
 
