@@ -39,10 +39,10 @@
 
 ![Dashboard Screenshot](Olist-Ecommerce-Analysis/Image/dashboard_screenshot.png)
 
-## 📊 Olist 电商用户价值分析看板 (RFM Model)
+## Olist 电商用户价值分析看板 (RFM Model)
 基于巴西 Olist 电商公开数据集，利用 RFM (Recency, Frequency, Monetary) 模型进行用户分层。
 
-### 🔍 核心洞察：
+### 🔍 洞察分析：
 1.  **价值分布**：通过树状图与条形图分析发现，**Champions（核心用户）** 虽仅占少数，但贡献了极高的平均消费额，是平台利润的主要来源。
 2.  **流失预警**：通过散点图定位了大量 **Hibernating（沉睡/流失）用户**，他们通常表现为“距上次购买时间较长”且“消费频次较低”。
 3.  **运营策略**：针对不同分层制定差异化策略（如对核心用户做 VIP 权益捆绑，对沉睡用户发放定向优惠券唤回）。
