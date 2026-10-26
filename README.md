@@ -59,9 +59,9 @@
 4.  **Segmentation:** 将用户标记为 Champions, Loyal, Hibernating 等。
 
 ## 🚀 6. 如何运行 (How to Run)
-1.  Clone this repository.
-2.  Install requirements: `pip install pandas numpy`
-3.  Run the Jupyter Notebook in the `notebooks` folder.
+1.  克隆此仓库。
+2.  安装： `pip install pandas numpy`
+3.  运行 `notebooks` 文件夹中的 Jupyter Notebook。
 
 ---
 *Author: [Ethan Chen]*
